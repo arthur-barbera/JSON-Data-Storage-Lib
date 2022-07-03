@@ -41,9 +41,9 @@ public class DataStorage<T> {
         this.object = object;
     }
 
-    public String serialize() {
+    public DataStorage<T> serialize() {
         this.serialized = this.gson.toJson(this.object);
-        return this.serialized;
+        return this;
     }
 
     public T deserialize(Class<T> classInstance) {
